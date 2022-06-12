@@ -4,20 +4,134 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gatien Salaun:</title>
+    <link rel="icon" href="./assets/icons8-g-50.png" />
+    <title>Gatien Salaun: Sell & rent your house dream with us</title>
+    <meta
+      name="description"
+      content="Selling and rent with us, at short time and hight profitability. We help you with your goals. We are for head business selling actives"
+    />
+    <meta name="keywords" content="selling, rent, money" />
+    <meta property="og:title" content="Services Marketing selling" />
+    <meta
+      property="og:image"
+      content="https://i.ibb.co/jhyKjqp/mateo-fernandez-XTC538-P-e-Wk-unsplash.jpg"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Joan&family=Montserrat:wght@100&display=swap");
+      :root {
+        --pink: #a62e5a;
+        --blueLight: #173ba6;
+        --blueDark: #183459;
+        --brown: #a66d3c;
+        --grey: #bfbfbf;
+        --greyLight: #838181;
+        --white: #fff;
+        --navbar-brand-margin-end: 3rem !important;
+      }
+
+      .navbar {
+        background-color: var(--blueDark);
+      }
+
+      .navbar-brand {
+        color: var(--white);
+      }
+
+      .nav-link {
+        color: var(--white);
+      }
+
+      .navbar-nav .nav-link.active,
+      .navbar-nav .show > .nav-link {
+        color: var(--greyLight);
+      }
+
+      .nav-link:focus,
+      .nav-link:hover {
+        color: var(--grey);
+      }
+      .dropdown-item.active,
+      .dropdown-item:active {
+        background-color: var(--blueLight);
+      }
+      .navbar-brand:focus,
+      .navbar-brand:hover {
+        color: var(--grey);
+      }
+      .navbar-brand {
+        margin-right: var(--navbar-brand-margin-end);
+      }
+      .dropdown-menu[data-bs-popper] {
+        left: -3rem;
+      }
+      .video-back {
+        opacity: 0.7;
+      }
+      .title_presentation {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--white);
+      }
+      .logo_img {
+        width: 200px;
+      }
+      .accordion-button {
+        font-size: 1.5rem;
+      }
+      .accordion-button:not(.collapsed) {
+        color: var(--white);
+        background-color: var(--blueDark);
+        box-shadow: inset 0 calc(var(--blueDark) * -1) 0 var(--blueLight);
+      }
+      .text_principal_why_hire_us {
+        font-size: medium;
+        color: var(--white);
+      }
+      .circle_img {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Joan", serif;
+      }
+      h2 {
+        font-size: 36px;
+      }
+      a,
+      small,
+      p {
+        font-family: "Montserrat", sans-serif;
+      }
+      .accordion-button::before {
+        content: "\2713";
+        padding-right: 5px;
+      }
+    </style>
   </head>
+
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-light">
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Gatien Salaun</a>
+          <a class="navbar-brand mb-0" href="#">
+            <img
+              class="logo_img"
+              src="https://res.cloudinary.com/luxuryp/images/w_960,c_limit,f_auto,q_auto/eksqbks3aelreidg6ndq/gatien-salaun_branding_beige-wordmark_rgb-2"
+              alt="Gatien Salaun"
+            />
+          </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -32,22 +146,27 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#"
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="#WhyHiresUs"
                   >Why hires us</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Resources</a>
+                <a class="nav-link" href="#Resources">Resources</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Portfolio</a>
+                <a class="nav-link" href="#Portfolio">Portfolio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact us</a>
+                <a class="nav-link" href="#ContactUs">Contact us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About us</a>
+                <a class="nav-link" href="#AboutUs">About us</a>
               </li>
+            </ul>
+            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
@@ -60,18 +179,34 @@
                   More info
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Neighborhoods</a></li>
-                  <li><hr class="dropdown-divider" /></li>
                   <li>
-                    <a class="dropdown-item" href="#">Press & Media</a>
+                    <a class="dropdown-item" href="#Neighborhoods"
+                      >Neighborhoods</a
+                    >
                   </li>
-                  <li><hr class="dropdown-divider" /></li>
                   <li>
-                    <a class="dropdown-item" href="#">Condos by price</a>
+                    <hr class="dropdown-divider" />
                   </li>
-                  <li><hr class="dropdown-divider" /></li>
                   <li>
-                    <a class="dropdown-item" href="#">Testimonials</a>
+                    <a class="dropdown-item" href="#Press&Media"
+                      >Press & Media</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#CondosByPrice"
+                      >Condos by price</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#Testimonials"
+                      >Testimonials</a
+                    >
                   </li>
                 </ul>
               </li>
@@ -80,6 +215,200 @@
         </div>
       </nav>
     </header>
+    <main>
+      <section>
+        <div class="ratio ratio-16x9">
+          <video
+            class="video-back"
+            src="./assets/pexels-alena-darmel-7646596.mp4?controls=0"
+            autoplay
+            muted
+            loop
+            allowfullscreen
+          ></video>
+        </div>
+        <div>
+          <h1 class="title_presentation text-center">
+            A super agent from Luxury Presence is ready to benefit you in real
+            estate development
+          </h1>
+        </div>
+      </section>
+      <section>
+        <div class="container p-4">
+          <div class="row">
+            <div class="col">
+              <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 id="WhyHiresUs" class="text-center">Why hire us</h2>
+                  <p class="text_principal_why_hire_us">
+                    When you work with an agent who has partnered with Luxury
+                    Presence, you benefit from the many different types of
+                    marketing capabilities the company offers
+                  </p>
+                  <h3 class="accordion-header" id="flush-headingOne">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseOne"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseOne"
+                    >
+                      Paid Advertising on All Channels
+                    </button>
+                  </h3>
+                  <div
+                    id="flush-collapseOne"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body d-flex align-items-center">
+                      <img
+                        class="circle_img m-4"
+                        src="https://i.ibb.co/rH5g6H4/pexels-pixabay-267350.jpg"
+                        alt="social media"
+                      />
+                      <p>
+                        Agents who use luxury real estate marketing services are
+                        able to identify your niche market, then create paid ads
+                        on Facebook, Google, Instagram, and YouTube that reach
+                        those interested in your property.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="flush-headingTwo">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseTwo"
+                    >
+                      Expert Content Production
+                    </button>
+                  </h3>
+                  <div
+                    id="flush-collapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body d-flex align-items-center">
+                      <img
+                        class="circle_img m-4"
+                        src="https://i.ibb.co/kgmHFFh/pexels-negative-space-34601.jpg"
+                        alt="content production"
+                      />
+                      <p>
+                        Being able to create high-quality content such as video
+                        and copywriting is an essential tool that elevates the
+                        agents who use luxury real estate marketing services
+                        above their competitors. Those agents who work with
+                        Luxury Presence get access to experienced real estate
+                        copywriters who create blogs, website copy, and content
+                        marketing pieces that make your property attractive to
+                        potential buyers.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseThree"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseThree"
+                    >
+                      Effective Search Engine Optimization
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body d-flex align-items-center">
+                      <img
+                        class="circle_img m-4"
+                        src="https://i.ibb.co/gDBTSCb/pexels-pixabay-270637.jpg"
+                        alt="seo strategies"
+                      />
+                      <p>
+                        The process of identifying and correctly using the right
+                        terms is a bit of a science—one that the SEO experts at
+                        Luxury Presence have mastered. When a potential buyer
+                        searches terms that match your home, your property will
+                        show up in the results and provide opportunities for the
+                        buyer to learn more.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingFour">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFour"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseFour"
+                    >
+                      Social Media Marketing
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseFour"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingFour"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body d-flex align-items-center">
+                      <img
+                        class="circle_img m-4"
+                        src="https://i.ibb.co/9NG3kd9/pexels-andrea-piacquadio-3761509.jpg"
+                        alt=" becoming an influencer"
+                      />
+                      <p>
+                        At Luxury Presence, our dedicated success team utilizes
+                        an agent’s stories and feed posts to help them go viral
+                        and become an authority in their industry. Once they’ve
+                        harnessed the power of becoming an influencer, they can
+                        use their voice to advocate for your home and sell it
+                        more quickly than their competitors.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <p id="Portfolio">Portfolio</p>
+        <p id="ContactUs">ContactUs</p>
+        <p id="AboutUs">AboutUs</p>
+      </section>
+      <section>
+        <p id="Resources">Resources</p>
+        
+      </section>
+      <section>
+        <p id="Neighborhoods">Neighborhoods</p>
+        <p id="Press&Media">Press&Media</p>
+        <p id="CondosByPrice">CondosByPrice</p>
+        <p id="Testimonials">Testimonials</p>
+      </section>
+    </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
