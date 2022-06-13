@@ -70,9 +70,6 @@
       .dropdown-menu[data-bs-popper] {
         left: -3rem;
       }
-      .video-back {
-        opacity: 0.7;
-      }
       .title_presentation {
         position: absolute;
         top: 50%;
@@ -100,6 +97,27 @@
         width: 100px;
         height: 100px;
       }
+      .accordion-button::before {
+        content: "\2713";
+        padding-right: 5px;
+      }
+      .container_resources {
+        background-color: var(--blueDark);
+      }
+      .title_blue {
+        color: var(--white);
+      }
+      .text-bg-info {
+        background-color: var(--grey) !important;
+        border-radius: 10px;
+      }
+      .bg-secondary {
+        background-color: var(--brown) !important;
+      }
+      .carousel-caption {
+        background-color: black;
+        opacity: 0.5;
+      }
       h1,
       h2,
       h3,
@@ -107,16 +125,13 @@
         font-family: "Joan", serif;
       }
       h2 {
-        font-size: 36px;
+        font-size: 2rem;
       }
       a,
       small,
       p {
         font-family: "Montserrat", sans-serif;
-      }
-      .accordion-button::before {
-        content: "\2713";
-        padding-right: 5px;
+        font-weight: 600;
       }
     </style>
   </head>
@@ -146,10 +161,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a
-                  class="nav-link"
-                  aria-current="page"
-                  href="#WhyHiresUs"
+                <a class="nav-link" aria-current="page" href="#WhyHiresUs"
                   >Why hires us</a
                 >
               </li>
@@ -238,14 +250,20 @@
         <div class="container p-4">
           <div class="row">
             <div class="col">
-              <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div
+                class="accordion accordion-flush p-4"
+                id="accordionFlushExample"
+              >
                 <div class="accordion-item">
                   <h2 id="WhyHiresUs" class="text-center">Why hire us</h2>
-                  <p class="text_principal_why_hire_us">
-                    When you work with an agent who has partnered with Luxury
-                    Presence, you benefit from the many different types of
-                    marketing capabilities the company offers
-                  </p>
+                  <div class="mx-auto p-4" style="width: 50rem;">
+                    <p class="text-bg-info p-2 text-center">
+                        When you work with an agent who has partnered with Luxury
+                        Presence, you benefit from the many different types of
+                        marketing capabilities the company offers
+                    </p>
+                  </div>
+          
                   <h3 class="accordion-header" id="flush-headingOne">
                     <button
                       class="accordion-button collapsed"
@@ -392,15 +410,304 @@
               </div>
             </div>
           </div>
-        </div>
-        
-        <p id="Portfolio">Portfolio</p>
-        <p id="ContactUs">ContactUs</p>
-        <p id="AboutUs">AboutUs</p>
-      </section>
-      <section>
-        <p id="Resources">Resources</p>
-        
+          <div class="row p-4 container_resources">
+            <h2 id="Resources" class="text-center title_blue">Resources</h2>
+            <div class="col">
+              <div class="card" style="width: 22rem">
+                <video
+                  src="./assets/pexels-rodnae-productions-6657871.mp4"
+                  autoplay
+                  muted
+                  loop
+                  allowfullscreen
+                  class="card-img-top"
+                  alt="home inspection"
+                ></video>
+                <div class="card-body">
+                  <h4 class="card-title text-center">Home inspectors</h4>
+                  <p class="card-text">
+                    With FLORIDA INSPECTIONS UNLIMITED and ALLIANCE HOME
+                    INSPECTIONS plan, you have inspectors for all residential
+                    and commercial buildings in South Florida, inspect
+                    everything in the home to ensure the quality of essentials
+                    like roofs, electrical systems, A/Cs, heating systems,roofs,
+                    attics, plumbing and electrical systems, and much more!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 22rem">
+                <video
+                  src="./assets/pexels-rodnae-productions-7821852.mp4"
+                  autoplay
+                  muted
+                  loop
+                  allowfullscreen
+                  class="card-img-top"
+                  alt="Insurance"
+                ></video>
+                <div class="card-body">
+                  <h4 class="card-title text-center">Insurance agents</h4>
+                  <p class="card-text">
+                    Let us know several UNITED INSURANCE, COSTELLO INSURANCE &
+                    MIAMI INSURANCE BROKERS, providers with success story, hard
+                    work, perseverance and integrity provided over 5000 happy
+                    clients. With more that 20 years of experience in the
+                    insurance world. We value our clients concerns and
+                    situations and so we are always committed to advising you
+                    with the best financial and objective analysis!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 22rem">
+                <video
+                  src="./assets/pexels-rodnae-productions-8293496.mp4"
+                  autoplay
+                  muted
+                  loop
+                  allowfullscreen
+                  class="card-img-top"
+                  alt="Mortgage"
+                ></video>
+                <div class="card-body">
+                  <h4 class="card-title text-center">Mortgage</h4>
+                  <p class="card-text">
+                    Loan Genius serves Miami-Dade County, Palm Beach County,
+                    Broward County, and beyond. If you're looking for mortgage
+                    anywhere in Florida, we can help you find the perfect fit.
+                    We are experts in all aspects of mortgage lending,
+                    refinances, hard money loans, FHA, VA, Conventional, and
+                    Construction Loans.!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row p-4">
+            <h2 id="Portfolio" class="text-center">
+              Portfolio
+              <span class="badge bg-secondary">New!</span>
+            </h2>
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div
+                    id="carouselExampleCaptions"
+                    class="carousel slide p-md-4"
+                    data-bs-ride="false"
+                  >
+                    <div class="carousel-indicators">
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                      ></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img
+                          src="https://dq1niho2427i9.cloudfront.net/fa1cbac6-0ba3-492d-82ab-a069aef7f37e/1191359425.jpg"
+                          class="d-block w-100"
+                          alt="..."
+                        />
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>
+                            OCEANIA IV 1841: Beautiful space to live
+                            ($1,399,000)
+                          </h5>
+                          <p>0.054 ACRES LOT & 2,340 SQ.FT.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img
+                          src="https://dq1niho2427i9.cloudfront.net/fa1cbac6-0ba3-492d-82ab-a069aef7f37e/614243679.jpg"
+                          class="d-block w-100"
+                          alt="..."
+                        />
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>3 BEDS & 3 FULL BATHS</h5>
+                          <p>
+                            The building's beach club is an amenity owners
+                            adore. It offers beach service, a beauty salon, two
+                            restaurants, fitness center w/ daily classes,
+                            racquetball, basketball & tennis courts, and lap
+                            pool. 75% owner occupied condominium with strong
+                            reserves.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img
+                          src="https://dq1niho2427i9.cloudfront.net/fa1cbac6-0ba3-492d-82ab-a069aef7f37e/2023954576.jpg"
+                          class="d-block w-100"
+                          alt="..."
+                        />
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>1995 BUILT</h5>
+                          <p>
+                            Natural light adorns the space as the morning sun
+                            warms the deep balconies. The Oceania complex is
+                            ideally located at the Southern part of Sunny Isles
+                            Beach near Oleta State Park and Haulover Beach.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#carouselExampleCaptions"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                      class="carousel-control-next"
+                      type="button"
+                      data-bs-target="#carouselExampleCaptions"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="col">
+                  <div
+                    id="carouselExampleCaptions1"
+                    class="carousel slide p-md-4"
+                    data-bs-ride="false"
+                  >
+                    <div class="carousel-indicators">
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleCaptions1"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleCaptions1"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleCaptions1"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                      ></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img
+                          src="https://res.cloudinary.com/luxuryp/images/w_960,c_limit,f_auto,q_auto/ljdtjahpvkmhvvprw4d5/400-alton-rd-murano-grande-apt-1710-gatien-salaun-miami-beach-realtor-2"
+                          class="d-block w-100"
+                          alt="..."
+                        />
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>3340 NE 190th St Unit: 809 ($5,000/mo)</h5>
+                          <p>01,670 ft²</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img
+                          src="https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/hgeehr98fxsngtkyents/400-alton-rd-murano-grande-apt-1710-gatien-salaun-miami-beach-realtor-8"
+                          class="d-block w-100"
+                          alt="..."
+                        />
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>2 BEDS & 3 FULL BATHS</h5>
+                          <p>
+                            Freshly painted. 6 - 12 month lease available for
+                            this large corner unit. 2 Bedrooms 2.5 Bathrooms,
+                            plus den with BEAUTIFUL WATER VIEWS of the Marina
+                            and intracoastal waterway.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img
+                          src="https://res.cloudinary.com/luxuryp/images/w_960,c_limit,f_auto,q_auto/hpvdp41nmdulw4q2zm5a/400-alton-rd-murano-grande-apt-1710-gatien-salaun-miami-beach-realtor-6"
+                          class="d-block w-100"
+                          alt="..."
+                        />
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>2006 BUILT</h5>
+                          <p>
+                            Pretend that you are on vacation everyday. Enjoy the
+                            gym, spa, yoga classes, party room, 2 pools, guard
+                            gated entry/security, etc. Next to Founders Park and
+                            a short walk to restaurants, Aventura Mall, etc.
+                            (Partial furniture possible: 2 beds, sofa, dining
+                            room set, kitchen necessities).
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#carouselExampleCaptions1"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                      class="carousel-control-next"
+                      type="button"
+                      data-bs-target="#carouselExampleCaptions1"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row p-4">
+            <h2 id="ContactUs">ContactUs</h2>
+          </div>
+          <div class="row p-4">
+            <h2 id="AboutUs">AboutUs</h2>
+          </div>
+        </div>      
       </section>
       <section>
         <p id="Neighborhoods">Neighborhoods</p>
