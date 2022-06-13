@@ -22,6 +22,10 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Joan&family=Montserrat:wght@100&display=swap");
       :root {
@@ -101,7 +105,8 @@
         content: "\2713";
         padding-right: 5px;
       }
-      .container_resources {
+      .container_resources,
+      .container_aboutUs {
         background-color: var(--blueDark);
       }
       .title_blue {
@@ -118,10 +123,25 @@
         background-color: black;
         opacity: 0.5;
       }
+      .img_aboutUs {
+        width: 34rem;
+      }
+      .vr {
+        color: var(--white);
+      }
+      .btn:active {
+        color: var(--bs-btn-active-color);
+        background-color: var(--blueDark);
+        border-color: var(--bs-btn-active-border-color);
+      }
+      .btn-primary {
+        background-color: var(--blueLight);
+      }
       h1,
       h2,
       h3,
-      h4 {
+      h4,
+      h5 {
         font-family: "Joan", serif;
       }
       h2 {
@@ -132,6 +152,13 @@
       p {
         font-family: "Montserrat", sans-serif;
         font-weight: 600;
+      }
+      a {
+        text-decoration: none;
+        color: var(--white);
+      }
+      a:hover {
+        color: var(--greyLight);
       }
     </style>
   </head>
@@ -172,10 +199,10 @@
                 <a class="nav-link" href="#Portfolio">Portfolio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#ContactUs">Contact us</a>
+                <a class="nav-link" href="#AboutUs">About us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#AboutUs">About us</a>
+                <a class="nav-link" href="#ContactUs">Contact us</a>
               </li>
             </ul>
             <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
@@ -192,33 +219,56 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a class="dropdown-item" href="#Neighborhoods"
-                      >Neighborhoods</a
+                    <a
+                      class="dropdown-item"
+                      data-bs-toggle="offcanvas"
+                      href="#offcanvasExampleNeighborhoods"
+                      role="button"
+                      aria-controls="offcanvasExampleNeighborhoods"
+                    >
+                      Neighborhoods
+                    </a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      data-bs-toggle="offcanvas"
+                      href="#offcanvasExamplePressMedia"
+                      role="button"
+                      aria-controls="offcanvasExamplePressMedia"
+                    >
+                      Press & Media</a
                     >
                   </li>
                   <li>
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#Press&Media"
-                      >Press & Media</a
+                    <a
+                      class="dropdown-item"
+                      data-bs-toggle="offcanvas"
+                      href="#offcanvasExampleCondosByPrice"
+                      role="button"
+                      aria-controls="offcanvasExampleCondosByPrice"
+                    >
+                      Condos by price</a
                     >
                   </li>
                   <li>
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#CondosByPrice"
-                      >Condos by price</a
-                    >
-                  </li>
-                  <li>
-                    <hr class="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#Testimonials"
-                      >Testimonials</a
-                    >
+                    <a
+                      class="dropdown-item"
+                      data-bs-toggle="offcanvas"
+                      href="#offcanvasExampleTestimonials"
+                      role="button"
+                      aria-controls="offcanvasExampleTestimonials"
+                      >Testimonials
+                    </a>
                   </li>
                 </ul>
               </li>
@@ -256,14 +306,14 @@
               >
                 <div class="accordion-item">
                   <h2 id="WhyHiresUs" class="text-center">Why hire us</h2>
-                  <div class="mx-auto p-4" style="width: 50rem;">
+                  <div class="mx-auto p-4" style="width: 50rem">
                     <p class="text-bg-info p-2 text-center">
-                        When you work with an agent who has partnered with Luxury
-                        Presence, you benefit from the many different types of
-                        marketing capabilities the company offers
+                      When you work with an agent who has partnered with Luxury
+                      Presence, you benefit from the many different types of
+                      marketing capabilities the company offers
                     </p>
                   </div>
-          
+
                   <h3 class="accordion-header" id="flush-headingOne">
                     <button
                       class="accordion-button collapsed"
@@ -701,19 +751,243 @@
               </div>
             </div>
           </div>
-          <div class="row p-4">
-            <h2 id="ContactUs">ContactUs</h2>
+          <div class="row p-4 container_aboutUs">
+            <h2 id="AboutUs" class="title_blue text-center">About Us</h2>
+            <div class="d-flex position-relative align-items-center">
+              <img
+                src="https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/rfuumphvil8xqbmfeafn/gatien-salaun-seated"
+                alt="Gatien Salaun agent"
+                class="flex-shrink-0 me-3 img_aboutUs"
+              />
+              <div class="vr"></div>
+              <div class="p-4">
+                <h5 class="title_blue">Here is Gatien</h5>
+                <p class="title_blue">
+                  Gatien has an impressive track record of delivering
+                  exceptional results for every client he serves. He understands
+                  every facet of the real estate business and extends that
+                  experience and market knowledge to his clients, walking them
+                  through each stage of the process of buying or selling a home.
+                  Gatien’s approach to closing deals, coupled with his extensive
+                  network of international and domestic clients, from Los
+                  Angeles to Monaco, have enabled him rise to the top 1% of
+                  Realtors in a short period of time.
+                </p>
+                <a href="#Portfolio" class="stretched-link"
+                  >See Portfolio</a
+                >
+              </div>
+            </div>
           </div>
           <div class="row p-4">
-            <h2 id="AboutUs">AboutUs</h2>
+            <h2 id="ContactUs" class="text-center">Contact details</h2>
+            <div
+              class="mx-auto p-4 d-flex align-items-center justify-content-center"
+            >
+              <ul class="list-group list-group-flush p-4">
+                <li class="list-group-item">
+                  <span class="material-symbols-outlined"> call </span>
+                  <strong>Phone:</strong>
+                  (561) 414-3565
+                </li>
+                <li class="list-group-item">
+                  <span class="material-symbols-outlined"> mail </span>
+                  <strong>Email:</strong>
+
+                  gatien.salaun@cbrealty.com
+                </li>
+                <li class="list-group-item">
+                  <span class="material-symbols-outlined"> pin_drop </span>
+                  <strong>Address:</strong>
+
+                  1682 Jefferson Ave., #103 Miami Beach, FL 33139
+                </li>
+              </ul>
+
+              <button
+                type="button"
+                class="btn btn-primary m-4"
+                data-bs-toggle="modal"
+                data-bs-target="#emailModal"
+                data-bs-whatever="@mail"
+              >
+                Send a message
+              </button>
+              <div
+                class="modal fade"
+                id="emailModal"
+                tabindex="-1"
+                aria-labelledby="emailModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        Send a mssg to Gatien
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="mb-3">
+                        <label for="emailForm" class="form-label"
+                          >Email address:</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="emailForm"
+                          placeholder="name@example.com"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="nameForm" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="nameForm" />
+                      </div>
+                      <div class="mb-3">
+                        <label for="numberForm" class="form-label"
+                          >Number:</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="numberForm"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label
+                          for="mssgeFormControlTextarea1"
+                          class="form-label"
+                          >Message:</label
+                        >
+                        <textarea
+                          class="form-control"
+                          id="mssgeFormControlTextarea1"
+                          rows="3"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-dismiss="modal"
+                      >
+                        Submit
+                      </button>
+                      <button type="button" class="btn btn-secondary">
+                        Cancel
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>      
+        </div>
       </section>
       <section>
-        <p id="Neighborhoods">Neighborhoods</p>
-        <p id="Press&Media">Press&Media</p>
-        <p id="CondosByPrice">CondosByPrice</p>
-        <p id="Testimonials">Testimonials</p>
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasExampleNeighborhoods"
+          aria-labelledby="offcanvasExampleLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleNeighborhoods">
+              Offcanvas
+            </h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <div>
+              Some text as placeholder. In real life you can have the elements
+              you have chosen. Like, text, images, lists, etc.
+            </div>
+          </div>
+        </div>
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasExamplePressMedia"
+          aria-labelledby="offcanvasExamplePressMedia"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExamplePressMedia">
+              Offcanvas
+            </h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <div>
+              Some text as placeholder. In real life you can have the elements
+              you have chosen. Like, text, images, lists, etc.
+            </div>
+          </div>
+        </div>
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasExampleCondosByPrice"
+          aria-labelledby="offcanvasExampleCondosByPrice"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleCondosByPrice">
+              Offcanvas
+            </h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <div>
+              Some text as placeholder. In real life you can have the elements
+              you have chosen. Like, text, images, lists, etc.
+            </div>
+          </div>
+        </div>
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasExampleTestimonials"
+          aria-labelledby="offcanvasExampleTestimonials"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleTestimonials">
+              Offcanvas
+            </h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <div>
+              Some text as placeholder. In real life you can have the elements
+              you have chosen. Like, text, images, lists, etc.
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <script
